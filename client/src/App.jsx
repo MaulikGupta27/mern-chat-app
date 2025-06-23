@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 import "./App.css";
 
@@ -6,6 +6,7 @@ function App() {
   const [socket, setSocket] = useState(null);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
+  const bottomRef = useRef(null); // auto-scroll anchor
 
   useEffect(() => {
     const newSocket = io("http://localhost:3000");
@@ -101,6 +102,7 @@ function App() {
 
   useEffect(() => {
     console.log(messages);
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" }); // auto-scroll
   }, [messages]);
 
   return (
@@ -152,6 +154,7 @@ function App() {
             </div>
           </div>
         ))}
+        <div ref={bottomRef} />
       </main>
 
       <footer className="bg-gray-800 p-4 border-t border-gray-700">
