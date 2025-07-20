@@ -1,17 +1,5 @@
 # 💬 MERN Chat App
 
-**COMPANY**: CODTECH IT SOLUTIONS
-
-**NAME**: MAULIK GUPTA
-
-**INTERN ID**: CT08DF401
-
-**DOMAIN**: MERN STACK WEB DEVELOPMENT
-
-**DURATION**: 8 WEEKS
-
-**MENTOR**: NEELA SANTOSH
-
 
 A real-time chat application built with the **MERN stack** (MongoDB, Express.js, React, Node.js) using **Socket.IO** for real-time communication and **Multer** for file uploads.
 
